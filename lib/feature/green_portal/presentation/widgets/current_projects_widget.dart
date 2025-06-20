@@ -73,8 +73,8 @@ class CurrentProjectsWidget extends StatelessWidget {
               Text(
                 l10n.joinGreenInitiative,
                 style: AppTextStyles.bodyMediumRegular.copyWith(
-                  fontWeight: FontWeight.w400,
                   color: AppColors.textSecondary,
+                  fontFamily: 'Gilroy-Regular',
                 ),
                 maxLines: 3,
                 overflow: TextOverflow.ellipsis,

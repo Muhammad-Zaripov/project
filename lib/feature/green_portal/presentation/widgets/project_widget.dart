@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:wallet/core/constants/app_paddings.dart';
 import 'package:wallet/core/constants/app_text_styles.dart';
 import 'package:wallet/core/constants/assets_path.dart';
-import 'package:wallet/core/widgets/danger_button.dart';
-import 'package:wallet/core/widgets/internal/app_button.dart';
-import 'package:wallet/core/widgets/primary_button.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_radius.dart';
 import '../../../../core/navigation/app_router.dart';
@@ -102,6 +99,7 @@ class ProjectWidget extends StatelessWidget {
                   style: AppTextStyles.bodyLargeRegular.copyWith(
                     fontWeight: FontWeight.w400,
                     color: Color(0xff4E5157),
+                    fontFamily: 'Gilroy-Regular',
                   ),
                 ),
                 SizedBox(height: 16),
@@ -148,11 +146,7 @@ class ProjectWidget extends StatelessWidget {
                       backgroundColor: AppColors.black,
                       textColor: AppColors.white,
                     ),
-                    // DangerButton(text: 'Direct donation'),
-                    // PrimaryButton(
-                    //   size: AppButtonSize.small,
-                    //   text: 'Direct donation',
-                    // ),
+
                     ButtonWidget(
                       title: 'Donate Green Fuelz',
                       onTap: () {

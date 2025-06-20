@@ -7,6 +7,8 @@ import 'package:wallet/core/constants/app_text_styles.dart';
 import 'package:wallet/core/constants/assets_path.dart';
 import 'package:wallet/core/widgets/custom_card.dart';
 
+import 'project_widget.dart';
+
 class ComplatedProjectWidget extends StatelessWidget {
   const ComplatedProjectWidget({super.key});
 
@@ -34,6 +36,16 @@ class ComplatedProjectWidget extends StatelessWidget {
     final scaleFactor = screenWidth / figmaScreenWidth;
 
     return CustomCard(
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          builder: (context) {
+            return ProjectWidget();
+          },
+        );
+      },
       width: responsiveWidgetWidth,
       margin: EdgeInsets.all(0),
       child: Column(

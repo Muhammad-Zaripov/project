@@ -39,7 +39,12 @@ class _ReceiptItemsWidgetState extends State<ReceiptItemsWidget> {
           children: [
             Row(
               children: [
-                Image.asset(AssetsPath.iocLogo),
+                Image.asset(
+                  AssetsPath.iocLogo,
+                  width: 50,
+                  height: 50,
+                  fit: BoxFit.cover,
+                ),
                 SizedBox(width: AppSpacing.spacingM),
                 Expanded(
                   child: Column(

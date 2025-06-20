@@ -57,7 +57,9 @@ class GoalWidget extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             'Our project aims to restore fragile ecosystems, combat climate change and support local communities by creating sustainable jobs. Each tree planted...',
 
-            style: AppTextStyles.bodyMediumRegular,
+            style: AppTextStyles.bodyMediumRegular.copyWith(
+              fontFamily: 'Gilroy-Regular',
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,

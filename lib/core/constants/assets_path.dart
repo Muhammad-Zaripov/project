@@ -27,6 +27,7 @@ class AssetsPath {
   static const String thanksImage = "$_images/thanks_image.png";
   static const String socialPortalBacground =
       "$_images/social_portal_bacground.png";
+  static const String fuelStation = "$_images/fuel_station.png";
 
   static const String car = "$_images/car.png";
   static const String convertFuelz = "$_images/convert_fuelz.png";
@@ -37,7 +38,6 @@ class AssetsPath {
 
   // Svg
   static const String fbLogo = "$_svg/fb_logo.svg";
-  static const String fuelStation = "$_svg/fuel_station.svg";
   static const String home = "$_svg/home.svg";
   static const String location = "$_svg/location.svg";
   static const String wallet = "$_svg/wallet.svg";
@@ -55,6 +55,17 @@ class AssetsPath {
   static const String museum = "$_svg/museum.svg";
   static const String setting = "$_svg/setting.svg";
   static const String badge = "$_svg/badge.svg";
+  static const String bed = "$_svg/bed.svg";
+  static const String carwash = "$_svg/carwash.svg";
+  static const String charger = "$_svg/charger.svg";
+  static const String drink = "$_svg/drink.svg";
+  static const String food = "$_svg/food.svg";
+  static const String fuel = "$_svg/fuel.svg";
+  static const String carwhite = "$_svg/carwhite.svg";
+  static const String forkwhite = "$_svg/forkwhite.svg";
+  static const String fuelwhite = "$_svg/fuelwhite.svg";
+  static const String settingGreen = "$_svg/setting_green.svg";
+  static const String vector = "$_svg/vector.svg";
 
   // static const String left = "$_svg/left.svg";
   static const String upload = "$_svg/upload.svg";
