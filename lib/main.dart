@@ -10,7 +10,6 @@ import 'core/constants/app_colors.dart';
 void main() async {
   // Ensure Flutter binding is initialized
   WidgetsFlutterBinding.ensureInitialized();
-
   // Set preferred orientations (portrait only)
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
@@ -22,13 +21,10 @@ void main() async {
       statusBarColor: AppColors.transparent, // status bar color
     ),
   );
-
   // Initialize dependency injection
   await di.init();
-
   // Set Bloc observer for debugging
   Bloc.observer = AppBlocObserver();
-
   // Run the app
   runApp(const FuelBackApp());
 }

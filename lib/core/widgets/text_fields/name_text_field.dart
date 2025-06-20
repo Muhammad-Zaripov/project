@@ -6,6 +6,7 @@ class NameTextField extends StatelessWidget {
   final String label;
   final String? hintText;
   final bool isRequired;
+  final bool isEnabledLabel;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
   final void Function(String)? onChanged;
@@ -15,6 +16,7 @@ class NameTextField extends StatelessWidget {
     this.label = 'First Name',
     this.hintText,
     this.isRequired = true,
+    this.isEnabledLabel = true,
     this.controller,
     this.validator,
     this.onChanged,
@@ -30,6 +32,7 @@ class NameTextField extends StatelessWidget {
       controller: controller,
       validator: validator,
       onChanged: onChanged,
+      isEnabledLabel: isEnabledLabel,
       textInputAction: TextInputAction.next,
       textCapitalization: TextCapitalization.words,
     );

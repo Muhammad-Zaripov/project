@@ -30,6 +30,7 @@ class AppTextField extends StatefulWidget {
   final void Function()? onTap;
   final bool enabled;
   final bool readOnly;
+  final bool isEnabledLabel;
   final int? maxLength;
   final int maxLines;
   final TextInputAction? textInputAction;
@@ -53,6 +54,7 @@ class AppTextField extends StatefulWidget {
     this.onTap,
     this.enabled = true,
     this.readOnly = false,
+    this.isEnabledLabel = true,
     this.maxLength,
     this.maxLines = 1,
     this.textInputAction,
@@ -94,17 +96,15 @@ class _AppTextFieldState extends State<AppTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 86,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _buildLabel(),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        if (widget.isEnabledLabel) _buildLabel(),
+        if (widget.isEnabledLabel)
           const SizedBox(height: AppSpacing.spacingS), // 8px
-          _buildTextField(),
-        ],
-      ),
+        _buildTextField(),
+      ],
     );
   }
 
@@ -112,13 +112,15 @@ class _AppTextFieldState extends State<AppTextField> {
     return RichText(
       text: TextSpan(
         text: widget.label,
-        style: AppTextStyles.bodyLargeRegular.withColor(AppColors.black),
+        style: AppTextStyles.bodyLargeMedium.copyWith(
+          fontWeight: FontWeight.w400,
+        ),
         children: [
           if (!widget.isRequired)
             TextSpan(
               text: ' (Optional)',
-              style: AppTextStyles.bodyLargeRegular.withColor(
-                AppColors.grey600,
+              style: AppTextStyles.bodyLargeMedium.copyWith(
+                fontWeight: FontWeight.w400,
               ),
             ),
         ],

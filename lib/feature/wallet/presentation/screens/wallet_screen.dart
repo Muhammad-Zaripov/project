@@ -17,36 +17,38 @@ class WalletScreen extends StatefulWidget {
 
 class _WalletScreenState extends State<WalletScreen> {
   late AppLocalizations l10n;
+
   @override
   Widget build(BuildContext context) {
     l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: CustomAppBar(title: l10n.wallet),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(AppPaddings.defaultPadding),
-          child: Column(
-            spacing: AppSpacing.spacingL,
-            children: [
-              BalanceCard(),
-              Padding(
-                padding: EdgeInsets.only(top: AppPaddings.paddingS),
-                child: ConvertFuelzCard(),
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: AppPaddings.paddingS),
-                child: PurchaseHistoryWidget(),
-              ),
-              ListView.separated(
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemCount: 3,
-                separatorBuilder: (context, index) => SizedBox(height: 16),
-                itemBuilder: (context, index) => ReceiptItemsWidget(),
-              ),
-            ],
+      body: CustomScrollView(
+        slivers: [
+          SliverPadding(
+            padding: EdgeInsets.all(AppPaddings.defaultPadding),
+            sliver: SliverList(
+              delegate: SliverChildListDelegate([
+                BalanceCard(),
+                SizedBox(height: AppSpacing.spacingL),
+                ConvertFuelzCard(),
+                SizedBox(height: AppSpacing.spacingL),
+                PurchaseHistoryWidget(),
+                SizedBox(height: AppSpacing.spacingL),
+              ]),
+            ),
           ),
-        ),
+          SliverPadding(
+            padding: EdgeInsets.symmetric(
+              horizontal: AppPaddings.defaultPadding,
+            ),
+            sliver: SliverList.separated(
+              itemCount: 3,
+              separatorBuilder: (context, index) => SizedBox(height: 16),
+              itemBuilder: (context, index) => ReceiptItemsWidget(),
+            ),
+          ),
+        ],
       ),
     );
   }

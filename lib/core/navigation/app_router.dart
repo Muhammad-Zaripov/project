@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:wallet/feature/green_portal/presentation/screens/direct_donation_screen.dart';
+import 'package:wallet/feature/green_portal/presentation/screens/donate_green_fluez.dart';
+import 'package:wallet/feature/green_portal/presentation/screens/thanks_screen.dart';
 import 'package:wallet/feature/wallet/presentation/screens/receipt_details_screen.dart';
 
 import '../../feature/wallet/presentation/screens/purchase_history_screen.dart';
@@ -34,9 +37,12 @@ class AppRouter {
   static const String notifications = '/notifications';
   static const String fuelPurchase = '/fuel-purchase';
   static const String paymentCheckout = '/payment-checkout';
-  //wallet
+  //new
   static const String wallet = '/wallet';
   static const String receipt = '/receipt';
+  static const String donateGreenFluez = '/donate-green-fluez';
+  static const String directDonation = '/direct-donation';
+  static const String thanks = '/thanks';
 
   // Route generator
   Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -45,6 +51,14 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const WalletScreen());
       case receipt:
         return MaterialPageRoute(builder: (_) => const ReceiptDetailsScreen());
+      case donateGreenFluez:
+        return MaterialPageRoute(
+          builder: (_) => const DonateGreenFluezScreen(),
+        );
+      case directDonation:
+        return MaterialPageRoute(builder: (_) => const DirectDonationScreen());
+      case thanks:
+        return MaterialPageRoute(builder: (_) => const ThanksScreen());
       // case splash:
       //   return MaterialPageRoute(builder: (_) => const SplashScreen());
 

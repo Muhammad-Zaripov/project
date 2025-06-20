@@ -30,7 +30,12 @@ class _FuelzBalanceWidgetState extends State<FuelzBalanceWidget> {
         spacing: AppSpacing.spacingS,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('SP96-E12', style: AppTextStyles.bodyMediumSemiBold),
+          Text(
+            'SP96-E12',
+            style: AppTextStyles.bodyMediumSemiBold.copyWith(
+              fontWeight: FontWeight.w600,
+            ),
+          ),
 
           Row(
             spacing: AppSpacing.spacingS,

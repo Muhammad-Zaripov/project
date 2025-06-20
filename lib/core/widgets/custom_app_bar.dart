@@ -10,24 +10,22 @@ class CustomAppBar extends AppBar {
     String title = '',
     super.actions,
     super.bottom,
-    bool centerTitle = true,
+    bool super.centerTitle = true,
     Color? backgroundColor,
     super.titleSpacing,
     super.toolbarTextStyle,
-    TextStyle? titleTextStyle,
+    super.titleTextStyle,
     double paddingLeft = AppSpacing.spacingL,
     super.elevation,
     super.actionsPadding,
     Widget? leading,
   }) : super(
          title: Text(title, style: titleTextStyle),
-         centerTitle: centerTitle,
          foregroundColor: AppColors.transparent,
          toolbarOpacity: 1,
          surfaceTintColor: AppColors.transparent,
          leadingWidth: kToolbarHeight + paddingLeft,
          backgroundColor: backgroundColor ?? AppColors.white,
-         titleTextStyle: titleTextStyle,
          leading:
              leading ??
              Row(

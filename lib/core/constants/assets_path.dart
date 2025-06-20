@@ -22,6 +22,11 @@ class AssetsPath {
   static const String map = "$_images/map.png";
   static const String receipt = "$_images/receipt.png";
   static const String left = "$_images/left.png";
+  static const String mountImage = "$_images/mount_image.png";
+  static const String complatedImage = "$_images/complated_image.png";
+  static const String thanksImage = "$_images/thanks_image.png";
+  static const String socialPortalBacground =
+      "$_images/social_portal_bacground.png";
 
   static const String car = "$_images/car.png";
   static const String convertFuelz = "$_images/convert_fuelz.png";
@@ -40,10 +45,17 @@ class AssetsPath {
   static const String locationGradient = "$_svg/location_gradient.svg";
   static const String fuelUp = "$_svg/fuel_up.svg";
   static const String accounts = "$_svg/accounts.svg";
-  static const String payBill = "$_svg/pay_bill.svg";
-  static const String transfer = "$_svg/transfer.svg";
+  static const String cup = "$_svg/cup.svg";
 
   //New
+  static const String payBill = "$_svg/pay_bill.svg";
+  static const String transfer = "$_svg/transfer.svg";
+  static const String portalMap = "$_svg/portal_map.svg";
+  static const String greenLine = "$_svg/green_line.svg";
+  static const String museum = "$_svg/museum.svg";
+  static const String setting = "$_svg/setting.svg";
+  static const String badge = "$_svg/badge.svg";
+
   // static const String left = "$_svg/left.svg";
   static const String upload = "$_svg/upload.svg";
   static const String hugeiconsWallet = "$_svg/hugeicons_wallet.svg";

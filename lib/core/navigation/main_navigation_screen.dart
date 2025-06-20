@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wallet/defoult_home_screen.dart';
 import 'package:wallet/feature/wallet/presentation/screens/wallet_screen.dart';
+import '../../feature/green_portal/presentation/screens/green_portal_screen.dart';
 import '../constants/app_colors.dart';
 import '../constants/app_radius.dart';
 import '../constants/app_spacing.dart';
@@ -168,7 +169,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       case 2:
         return PlacePage(pageName: "Search");
       case 3:
-        return PlacePage(pageName: "Refueling");
+        return GreenPortalScreen();
       case 4:
         return WalletScreen();
 

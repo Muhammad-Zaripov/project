@@ -43,12 +43,19 @@ class _BalanceCardState extends State<BalanceCard> {
                   children: [
                     Text(
                       l10n.myBalances,
-                      style: AppTextStyles.heading2SemiBold,
+                      style: AppTextStyles.heading2SemiBold.copyWith(
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                     Row(
                       spacing: AppSpacing.spacingXs,
                       children: [
-                        Text('646', style: AppTextStyles.heading1Bold),
+                        Text(
+                          '646',
+                          style: AppTextStyles.heading1Bold.copyWith(
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
                         Image.asset(AssetsPath.piecee, width: 40, height: 40),
                       ],
                     ),
@@ -95,7 +102,10 @@ class _BalanceCardState extends State<BalanceCard> {
                                 Text(
                                   l10n.add,
                                   style: AppTextStyles.bodyLargeSemiBold
-                                      .copyWith(color: AppColors.white),
+                                      .copyWith(
+                                        color: AppColors.white,
+                                        fontWeight: FontWeight.w600,
+                                      ),
                                 ),
                               ],
                             ),
