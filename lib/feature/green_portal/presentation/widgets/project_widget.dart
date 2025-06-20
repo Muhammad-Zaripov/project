@@ -13,7 +13,7 @@ class ProjectWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.75,
+      height: MediaQuery.of(context).size.height * 0.9,
       decoration: BoxDecoration(
         color: AppColors.white,
         borderRadius: BorderRadius.only(
